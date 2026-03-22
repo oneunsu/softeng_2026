@@ -33,10 +33,27 @@
 - 출력 꾸미기: `rich` 활용
 - 프로그램 형태로 UI 구성 및 꾸미기
 
+### 📂 hw04
+html 기반 **웹 애플리케이션** 코드
+
+- `gugudan_app.py` : 구구단 웹 애플리케이션
+- `unit_app.py`: 단위 변환 웹 애플리케이션
+
+### 📂 hw05
+개인 홈페이지 제작 프로젝트
+
+- HTML 파일: `index.html`, `about.html`, `vision.html`, `projects.html`
+- CSS: `css/style.css`
+- JS: `json/script.js`
+- 배포용 폴더: docs (저장소 최상단에 위치)
+
 ### 📂 Repository Structure
 ```
 softeng_2026
+├── docs
 ├── hw02 
-├── hw03 
+├── hw03
+├── hw04
+├── hw05
 └── README.md
 ```
