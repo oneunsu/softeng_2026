@@ -42,6 +42,7 @@ html 기반 **웹 애플리케이션** 코드
 ### 📂 hw05
 개인 홈페이지 제작 프로젝트
 
+- [프로젝트 홈페이지](https://oneunsu.github.io/softeng_2026/)
 - HTML 파일: `index.html`, `about.html`, `vision.html`, `projects.html`
 - CSS: `css/style.css`
 - JS: `json/script.js`
