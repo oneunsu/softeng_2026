@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if request.path == "/about.html" %}
+    <title>About Me | Jang Eunsu</title>
+    <!-- Lucide Icons for social icons -->
+    {% elif request.path == "/vision.html" %}
+    <title>Vision | Jang Eunsu</title>
+    {% elif request.path == "/projects.html" %}
+    <title>Projects | Jang Eunsu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    {% endif %}
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body{% if request.path == "/about.html" %} class="about-page"{% elif request.path == "/projects.html" %} class="projects-page"{% endif %}>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Jang Eunsu</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html"{% if request.path == "/about.html" %} class="active"{% endif %}>About</a>
+                <a href="projects.html"{% if request.path == "/projects.html" %} class="active"{% endif %}>Projects</a>
+                <a href="vision.html"{% if request.path == "/vision.html" %} class="active"{% endif %}>Vision</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1 class="page-title fade-up">{% if request.path == "/about.html" %}ABOUT ME{% elif request.path == "/vision.html" %}MY FUTURE<br>VISION{% elif request.path == "/projects.html" %}MY PROJECTS{% endif %}</h1>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <p class="site-footer-copy">&copy; 2026 JANG EUNSU. ALL RIGHTS RESERVED.</p>
+            <div class="site-footer-links">
+                <a href="https://github.com/oneunsu" target="_blank" rel="noopener noreferrer" class="site-footer-icon" aria-label="GitHub">
+                    <i data-lucide="github"></i>
+                </a>
+                <a href="mailto:jangdmstn@gmail.com" class="site-footer-icon" aria-label="Email">
+                    <i data-lucide="mail"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="json/script.js"></script>
+</body>
+</html>
