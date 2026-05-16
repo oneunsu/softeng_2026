@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Eunsu's Blog</title>
+</head>
+<body>
+<nav>
+    <a href="/">홈</a>
+    <a href="/blog/">게시판</a>
+    <a href="/about_me/">About me</a>
+</nav>
+
+<h1>Eunsu's Blog</h1>
+
+{% for p in post_list %}
+<hr/>
+<h2><a href="{{ p.get_absolute_url }}">{{ p.title }}</a></h2>
+<h4>{{ p.created_at }}</h4>
+<p>{{ p.content }}</p>
+{% endfor %}
+
+</body>
+</html>
